@@ -1,25 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Route} from "react-router-dom";
+import BrowseMentor from './containers/BrowseMentor.js'
+import BookingResult from './components/BookingResult.js'
+import BookingForm from './components/BookingForm.js'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Route exact path ={'/Dashboard/BrowseMentor'} component={BrowseMentor}/>
+      <Route path ={'/Dashbaord/BrowseMentor/BookingForm'} component={BookingForm}/>
+      <Route path ={'/Dashboard/BrowseMentor/BookingForm/BookingResult'} component={BookingResult}/>
+    </>
   );
 }
 
